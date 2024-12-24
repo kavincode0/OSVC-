@@ -12,5 +12,10 @@ app.use(cors());
 const vulnerabilitiesRoute = require('./routes/vulnerabilities');
 app.use('/api/v1/vulnerabilities', vulnerabilitiesRoute);
 
+// Test Root Route
+app.get('/', (req, res) => {
+    res.send('Server is running!');
+});
+
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

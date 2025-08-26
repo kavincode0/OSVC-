@@ -1,21 +1,22 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const cors = require('cors');
+const vulnerabilitiesRouter = require('./routes/vulnerabilities'); // Correct the path to vulnerabilities router
 
 const app = express();
+const port = 5000;
 
-// Middleware
-app.use(bodyParser.json());
-app.use(cors());
-
-// Routes
-const vulnerabilitiesRoute = require('./routes/vulnerabilities');
-app.use('/api/v1/vulnerabilities', vulnerabilitiesRoute);
-
-// Test Root Route
 app.get('/', (req, res) => {
-    res.send('Server is running!');
+    res.send('Server is running');
 });
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Middleware
+app.use(cors({origin: '*'}));
+app.use(express.json());
+
+// Mount the vulnerabilities router
+app.use('/vulnerabilities', vulnerabilitiesRouter);
+
+// Start the Express server
+app.listen(port, () => {
+    console.log(`Express server running on http://localhost:${port}`);
+});

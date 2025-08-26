@@ -1,0 +1,79 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: white;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  background: black;
+  height: 20px;
+  padding: 30px;
+}
+
+header svg {
+  font-size: 30px;
+}
+
+.sidenav {
+  width: 200px;
+  background: rgba(0, 0, 0, 0.664);
+  position: absolute;
+  height: 70vh;
+  padding: 0 10px;
+  left: -100%;
+  transition: all 1s; 
+}
+
+.sidenav.active {
+  left: 0;
+}
+
+.logo {
+  width: 60px;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+ul li a {
+  color: white; 
+  text-decoration: none;
+  font-size: 16px;
+  display: block; 
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+ul li a:hover, 
+ul li a.active {
+  background: #0e1f52;
+}
+
+.main {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: green;
+}
+
+.content {
+  font-style: italic;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: medium;
+  font-weight: 300;
+}

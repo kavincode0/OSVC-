@@ -20,7 +20,8 @@
 ## 🖼️ Application UI
 
 ![Module Risk Scan UI](./images/ui1.png)  
-![Outcomes](./images/ui2.png)(./images/ui3.png)   
+![Outcomes 1](./images/ui2.png)  
+![Outcomes 2](./images/ui3.png)  
 
 ## 🚀 Tech Stack
 - **Frontend:** React.js  

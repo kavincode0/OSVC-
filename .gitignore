@@ -2,11 +2,10 @@
 
 
 # dependencies
-/node_modules
+/osvc0.1.0/node_modules
 /.pnp
 .pnp.js
-images/
-bfg.jar
+/osvc0.1.0/node_modules/.cache/
 
 # testing
 /coverage
